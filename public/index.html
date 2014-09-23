@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script src="/binary.js"></script>
+</head>
+<body style="background-size:cover">
+
+  <button>click me</button>
+
+  <script type="text/javascript">
+    console.log("loaded");
+    document.querySelector("button").onclick = function() {
+
+      var newImg = new Image;
+      newImg.onload = function() {
+        document.body.style.backgroundImage = 'url(/image_2.jpg)';
+      }
+      newImg.src = '/image_2.jpg';
+
+    }
+
+  </script>
+</body>
+</html>
